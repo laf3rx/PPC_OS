@@ -14,6 +14,77 @@ PPC OS умеет работать с файлами, в том числе - п�
 <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8cbdc4e2-5caf-45e7-8db2-5f0e0f8af603" />
 
 
+## Главное Меню
+Главное меню состоит из 8 разделов
+1. WI-FI
+2. ДАТА И ВРЕМЯ
+3. ВЫЧИСЛЕНИЯ
+4. ЗАПИСИ
+5. ФАЙЛЫ
+6. ИГРЫ
+7. PROGRAM
+8. НАСТРОЙКИ
+
+### WI-FI
+1. Сети / Подключение
+ESP32 имеет радио модуль для работы с wifi. Она может сканировать ближайшие wifi сети и подключаться к ним.
+Плата использует wifi для определения точного времени, а также для передачи файлов.
+2. HTTP ОБМЕН ФАЙЛАМИ
+Если плата подключена к wifi сети. Можно включить передачу данных по http. Плата создаст http сервер и предложит вам задать пинкод.
+<img width="749" height="475" alt="image" src="https://github.com/user-attachments/assets/15000bd1-8966-4c0b-916f-6891409f7763" />
+
+Пинкод установлен из за соображений безопасности, ведь вашу сеть могут просканировать и открыть http сервер PPC_OS. Будьте осторожны и обязательно передавайте файлы с пинкодом. Также, рекомендуется использовать функцию только в проверенных wifi сетях.
+Вот так выглядит http сервер PPC_OS:
+<img width="1090" height="421" alt="image" src="https://github.com/user-attachments/assets/eb44cb3f-acc6-417b-836b-50d9576f4370" />
+<img width="728" height="807" alt="image" src="https://github.com/user-attachments/assets/cdfca397-3894-47e7-b404-b965a0190cc5" />
+
+### ДАТА И ВРЕМЯ
+1. ЧАСЫ И ДАТА
+Показывает текущее время и дату синхронизированную через wifi.
+<img width="547" height="341" alt="image" src="https://github.com/user-attachments/assets/3c6d13b5-ce2c-4b2d-95d7-bcc250821d48" />
+
+2. ТАЙМЕР
+Позволяет задать отчёт в формате ЧЧММСС.
+<img width="507" height="405" alt="image" src="https://github.com/user-attachments/assets/1c7e645a-6c74-4328-84be-e3282c90dac0" />
+
+3. СЕКУНДОМЕР
+Позволяет засечь время
+<img width="545" height="451" alt="image" src="https://github.com/user-attachments/assets/b1aa7709-7a79-481a-9ae7-ba0a99c533bb" />
+
+4. Календарь
+Календарь отображает все 12 месяцев. В нём можно создавать записи на определённый день и они будут отображаться на рабочем столе если они близко.
+<img width="725" height="519" alt="image" src="https://github.com/user-attachments/assets/03fcb1a8-2818-4d5b-a00a-9b0d037b215f" />
+Событие отображается точкой справа от числа (см на 16 число). На примере записи события можете изучить ввод с клавиатуры. Реализован как на кнопочных телефонах, т.е. есть подсказка где находится буква и сколько раз нужно нажать кнопку чтобы её ввести.
+<img width="616" height="462" alt="image" src="https://github.com/user-attachments/assets/fa306a70-5c55-4eb1-b1b1-1393c841302a" />
+
+### Вычисления
+1. Обычный калькулятор
+Самый стандартный калькулятор. Выполняет операции сложения, вычитания, умножения и деления.
+2. ПРОГРАММИСТСКИЙ + КОНВ
+<img width="716" height="504" alt="image" src="https://github.com/user-attachments/assets/d731e576-899e-4dfe-8695-35cb1a45b6ff" />
+<img width="837" height="559" alt="image" src="https://github.com/user-attachments/assets/44d28e6c-6a25-4b86-9243-00d27cfcae01" />
+3. ТАБЛИЦА ИСТИННОСТИ
+Позволяет выбрать логическую операцию и построить по ней таблицу истинности.
+<img width="747" height="485" alt="image" src="https://github.com/user-attachments/assets/bfb74cca-2044-42a7-a68b-77192fae46a9" />
+4. МАТЕМАТИЧЕСКИЙ КАЛЬКУЛЯТОР
+Расширенная версия обычного калькулятора, позволяющая посчитать значения математических фукнций. Например 
+
+Калькулятор позволяет проводить логические операции (AND, NAND, OR, NOR, XOR, XNOR, NOT, BUFFER). Имеет конвертер (DEC, HEX, BIN)
+<img width="717" height="519" alt="image" src="https://github.com/user-attachments/assets/826fa7de-85e2-4416-9fa5-4b268d7ff777" />
+cos 1 = 0.999848
+<img width="744" height="490" alt="image" src="https://github.com/user-attachments/assets/6bed997c-ae38-48f4-846f-aada724440be" />
+
+5. ГРАФИК ФУНКЦИЙ
+Позволяет строить графики функций. Например график синусоиды y = sin(x). Поддерживает регулировку построения графика.
+<img width="627" height="397" alt="image" src="https://github.com/user-attachments/assets/f9a0972e-c6d9-4a66-ac7d-9d8497477565" />
+
+6. ГЕНЕРАТОР ПАРОЛЕЙ
+Модуль генератора паролей позволяет генерировать пароли в различных режимах (Только цифры, Усиленный, Буквы + цифры, HEX)
+<img width="661" height="435" alt="image" src="https://github.com/user-attachments/assets/b9a0f4b6-7865-4c9c-b42f-00acd1fc3ef0" />
+<img width="749" height="485" alt="image" src="https://github.com/user-attachments/assets/4458d311-4485-4989-b8ed-843814548d25" />
+<img width="617" height="467" alt="image" src="https://github.com/user-attachments/assets/69208adc-808c-4e8e-80df-f1d3cabb7bd1" />
+
+
 
 
 # Из чего состоит
