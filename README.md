@@ -11,7 +11,7 @@ PPC OS умеет работать с файлами, в том числе - п�
 <img width="1881" height="1297" alt="image" src="https://github.com/user-attachments/assets/1c737b78-838d-4aac-832e-ca48788a85a1" />
 
 После разблокировки:
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8cbdc4e2-5caf-45e7-8db2-5f0e0f8af603" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8cbdc4e2-5caf-45e7-8db2-5f0e0f8af603" />
 
 
 
