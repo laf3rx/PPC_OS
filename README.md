@@ -83,9 +83,62 @@ cos 1 = 0.999848
 <img width="661" height="435" alt="image" src="https://github.com/user-attachments/assets/b9a0f4b6-7865-4c9c-b42f-00acd1fc3ef0" />
 <img width="749" height="485" alt="image" src="https://github.com/user-attachments/assets/4458d311-4485-4989-b8ed-843814548d25" />
 <img width="617" height="467" alt="image" src="https://github.com/user-attachments/assets/69208adc-808c-4e8e-80df-f1d3cabb7bd1" />
+<img width="565" height="479" alt="image" src="https://github.com/user-attachments/assets/ad031cff-5457-4b82-bd47-7445ed6aba40" />
+
+7. HASH КАЛЬКУЛЯТОР
+Хэширует введёную строчку. Поддерживает алгоритмы CRC32, SHA1, SHA256.
+<img width="544" height="491" alt="image" src="https://github.com/user-attachments/assets/803116ab-5687-4fb5-83d6-11c29e118261" />
+
+<img width="655" height="517" alt="image" src="https://github.com/user-attachments/assets/34d34390-579d-4bc6-98e7-e00f135ade21" />
 
 
+### Записи
+1. Обычные заметки
+Позволяет создавать заметки (plaintext). Может открывать текущие, создавать новые в виде файлов NOTE.TXT и удалять. Поддерживает режим навигации.
+<img width="797" height="463" alt="image" src="https://github.com/user-attachments/assets/c686f900-bc99-47e5-abb1-b97feff32644" />
 
+<img width="629" height="485" alt="image" src="https://github.com/user-attachments/assets/70f6041a-56a2-4f0f-bdca-466ea9a51deb" />
+Реализована защита от случайного удаления файлов: перед удалением PPC OS попросит вас нажать клавишу C дважды.
+<img width="651" height="503" alt="image" src="https://github.com/user-attachments/assets/f3b52657-8eaf-4a00-9c35-05e1ece397b3" />
+
+2. ЗАШИФРОВАННЫЕ
+Расширенный модуль заметок. Зашифрованные заметки создаются в отдельной хранилище внутри LittleFS. Записки шифруется AES-256 и сохраняются в виде шифротекстов SEC.DAT. Пинкод напрямую во флешпамять не записывается, вместо этого сохраняется его sha256 хэш.
+
+При открытии нужно ввести пинкод расшифрования:
+<img width="689" height="509" alt="image" src="https://github.com/user-attachments/assets/9e5995cc-c466-406d-9380-e783e73f093c" />
+<img width="655" height="479" alt="image" src="https://github.com/user-attachments/assets/a23bd622-c0fc-402c-9ee9-36d3e0671ef3" />
+<img width="613" height="491" alt="image" src="https://github.com/user-attachments/assets/446c148e-3986-4a23-9f89-1fa4a28ab4d0" />
+
+3. АДРЕССНАЯ КНИГА
+Адресная книга работает по такому же методу что и модуль зашифрованных записок. Но вместо записок здесь адресная книга.
+Адресная книга зашифрована aes256. При открытии нужно ввести пинкод:
+
+<img width="603" height="455" alt="image" src="https://github.com/user-attachments/assets/f1a8cad7-96ef-494f-9a50-6f13a9ba401c" />
+
+<img width="835" height="551" alt="image" src="https://github.com/user-attachments/assets/2ef0e6b6-48b2-4e48-9740-1e1e289e287a" />
+<img width="474" height="393" alt="image" src="https://github.com/user-attachments/assets/428abbcb-4855-40e4-99f6-bf8b747788f4" />
+
+### Файлы
+1. МЕНЕДЖЕР ФАЙЛОВ
+2. ЧТЕНИЕ ТЕКСТА
+3. HEX-РЕДАКТОР
+
+### ИГРЫ
+1. ПИНГ-ПОНГ
+2. СУДОКУ 4х4
+
+### PROGRAM
+Интерфейс виртуальной среды
+1. Редактор
+2. Запустить
+3. Справка
+
+### Настройки
+1. Язык
+2. Тема
+3. Рабочий стол
+4. Блокировка
+5. О системе
 
 # Из чего состоит
 Плата - ESP32 DevKit
