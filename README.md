@@ -118,7 +118,8 @@ cos 1 = 0.999848
 <img width="835" height="551" alt="image" src="https://github.com/user-attachments/assets/2ef0e6b6-48b2-4e48-9740-1e1e289e287a" />
 <img width="474" height="393" alt="image" src="https://github.com/user-attachments/assets/428abbcb-4855-40e4-99f6-bf8b747788f4" />
 
-### Файлы
+
+### Файлы //отчёт в разработке
 1. МЕНЕДЖЕР ФАЙЛОВ
 2. ЧТЕНИЕ ТЕКСТА
 3. HEX-РЕДАКТОР
