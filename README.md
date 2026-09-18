@@ -2,7 +2,10 @@
 Портативный программируемый компьютер с собственной операционной системой и своим языком программирования. Кибердека на максималках.
 <img width="1811" height="1329" alt="image" src="https://github.com/user-attachments/assets/1aa949eb-b13b-423c-a09c-9faf8d6658e6" />
 
+## Что он умеет?
 
+
+<img width="1957" height="1377" alt="image" src="https://github.com/user-attachments/assets/8cbdc4e2-5caf-45e7-8db2-5f0e0f8af603" />
 
 
 
