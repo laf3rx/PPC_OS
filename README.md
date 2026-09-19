@@ -121,8 +121,23 @@ cos 1 = 0.999848
 
 ### Файлы //отчёт в разработке
 1. МЕНЕДЖЕР ФАЙЛОВ
-2. ЧТЕНИЕ ТЕКСТА
-3. HEX-РЕДАКТОР
+<img width="585" height="437" alt="image" src="https://github.com/user-attachments/assets/f9324546-6d7a-434a-8986-cd6daa320c28" />
+Позволяет проводить операции с файлами. Позволяет вывести информацию по файлу, переименовать, копировать, переместить, удалить, и сделать новую папку
+<img width="747" height="473" alt="image" src="https://github.com/user-attachments/assets/671b9b6b-28bd-4e21-aa37-7e343d77ef2b" />
+<img width="677" height="443" alt="image" src="https://github.com/user-attachments/assets/e2ed9461-9593-4459-82ce-76b20df4f40d" />
+
+При открытии изображения открывается средство просмотра изображений. Можно переключаться между изображениями, а также выбрать какое понравится и поставить его на обои. Есть список изображений идущий по умолчанию. Их можно скачать из папки PPC_OS_wallpapers.
+
+<img width="487" height="357" alt="image" src="https://github.com/user-attachments/assets/57a7cea6-2907-477e-be23-2910daaa0554" />
+<img width="511" height="367" alt="image" src="https://github.com/user-attachments/assets/d481ad91-93e9-46b5-b515-cfd7382f0a22" />
+<img width="463" height="353" alt="image" src="https://github.com/user-attachments/assets/9ac1192f-a784-4a2a-883a-8db9ebc51fe2" />
+<img width="501" height="359" alt="image" src="https://github.com/user-attachments/assets/b10ff7de-f890-45ef-8043-395067d80d90" />
+<img width="489" height="373" alt="image" src="https://github.com/user-attachments/assets/3baec4cb-b184-429a-a06b-2918a2ea7009" />
+
+
+
+3. ЧТЕНИЕ ТЕКСТА
+4. HEX-РЕДАКТОР
 
 ### ИГРЫ
 1. ПИНГ-ПОНГ
