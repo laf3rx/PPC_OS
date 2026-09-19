@@ -133,39 +133,221 @@ cos 1 = 0.999848
 <img width="463" height="353" alt="image" src="https://github.com/user-attachments/assets/9ac1192f-a784-4a2a-883a-8db9ebc51fe2" />
 <img width="501" height="359" alt="image" src="https://github.com/user-attachments/assets/b10ff7de-f890-45ef-8043-395067d80d90" />
 <img width="489" height="373" alt="image" src="https://github.com/user-attachments/assets/3baec4cb-b184-429a-a06b-2918a2ea7009" />
+<img width="479" height="349" alt="image" src="https://github.com/user-attachments/assets/ce9cbe84-0c72-4f1e-b22b-a2d98c686a05" />
+<img width="491" height="341" alt="image" src="https://github.com/user-attachments/assets/38cd2fdc-bfe6-4d2a-a8bb-ee796018f414" />
+<img width="507" height="363" alt="image" src="https://github.com/user-attachments/assets/6a170d78-4b66-4add-81f7-ef4b275348c5" />
+<img width="493" height="355" alt="image" src="https://github.com/user-attachments/assets/84740659-024d-4fa4-9d2d-a7d96f7a35ff" />
 
 
 
 3. ЧТЕНИЕ ТЕКСТА
-4. HEX-РЕДАКТОР
+Средство просмотра текста позволяет открыть и отредактировать текстовые файлы.
+<img width="687" height="533" alt="image" src="https://github.com/user-attachments/assets/c5335a04-2ff2-416c-b6a5-1049aa8ca8a9" />
+<img width="561" height="471" alt="image" src="https://github.com/user-attachments/assets/f52fbb27-f31d-4f05-af40-d16395f43be2" />
+
+5. HEX-РЕДАКТОР
+HEX-редактор позволяет открыть любые файлы и изменить их байты.
+<img width="455" height="369" alt="image" src="https://github.com/user-attachments/assets/d073cd9d-c9ed-4db5-a171-f9eb240eec9d" />
+<img width="501" height="393" alt="image" src="https://github.com/user-attachments/assets/bdcaff71-fc11-47d8-89ab-600cfacd30f1" />
 
 ### ИГРЫ
+Разумеется тут буду игры. Чтобы можно было отдохнуть, поиграть, или просто заняться чем то пока стоишь в очереди куда нибудь.
+<img width="703" height="497" alt="image" src="https://github.com/user-attachments/assets/747a2327-6fc8-4c94-a581-08bb1cd04ce2" />
+
 1. ПИНГ-ПОНГ
-2. СУДОКУ 4х4
+Реализована игра в пинг-понг с ботом.
+<img width="627" height="521" alt="image" src="https://github.com/user-attachments/assets/0721104b-32cb-4a94-9bef-fd7adaff6eaa" />
+
+3. СУДОКУ 4х4
+Реализовано судоку 4x4. Каждый раз генерируется случайный набор.
+<img width="521" height="405" alt="image" src="https://github.com/user-attachments/assets/ef5cbcc8-838b-486e-86ea-8c4716428c08" />
 
 ### PROGRAM
+Вот тут самое крутое. Program - это встроенная среда программирования. Она позволяет пользователю самостоятельно создавать, редактировать и запускать программы непосредственно на устройстве (БЕЗ обновления через прошивку!). Для этого была разработан собственный интерпретируемый язык PPC Script и программная среда для его выполнения. Благодаря разделу PROGRAM устройство не ограничивается набором заранее созданных приложений: пользователь может задавать собственные алгоритмы и выполнять их без подключения компьютера. 
+<img width="651" height="483" alt="image" src="https://github.com/user-attachments/assets/991645bd-cc49-435f-8008-02080f8e5b74" />
+1. ГДЕ ПИСАТЬ И КАК ЗАПУСКАТЬ
+----------------------------
+Главное меню → PROGRAM → РЕДАКТОР — написать или изменить программу.
+PROGRAM → ЗАПУСТИТЬ — выполнить программу.
+PROGRAM → СПРАВКА — встроенная краткая справка.
+
+Программа сохраняется во Flash-памяти ESP32, в LittleFS:
+/PROGRAM.PPC
+
+Одна команда = одна строка. Команды и имена регистров можно писать
+заглавными или строчными буквами. Строки нумеруются с 1; пустые
+строки и строки с комментариями также считаются при переходах GOTO.
+
+2. РЕГИСТРЫ И ЗНАЧЕНИЯ
+---------------------
+A, B, C, ... Z — 26 целочисленных регистров (знаковые 32-битные числа).
+При каждом новом запуске все регистры обнуляются.
+В качестве числового аргумента можно указать число или другой регистр:
+
+SET A 10     — A = 10
+SET B A      — B = значение A
+ADD A B      — A = A + B
+
+Для чисел не поддерживаются дробные значения (1.5 и т. п.).
+Деление DIV — целочисленное, дробная часть отбрасывается.
+
+3. ВСЕ КОМАНДЫ
+--------------
+
+ПРИСВАИВАНИЕ И АРИФМЕТИКА
+
+SET A 10     Записать 10 в A.
+SET A B      Скопировать значение B в A.
+ADD A 5      Прибавить 5 к A: A = A + 5.
+SUB A 5      Вычесть 5 из A: A = A - 5.
+MUL A 5      Умножить A на 5: A = A * 5.
+DIV A 5      Целочисленно разделить A на 5: A = A / 5.
+MOD A 5      Записать остаток от деления A на 5.
+INC A        Увеличить A на 1.
+DEC A        Уменьшить A на 1.
+
+Для SET, ADD, SUB, MUL, DIV и MOD вместо второго числа допустим
+регистр: например, MUL A B. Деление и MOD на ноль вызывают ошибку.
+
+ВЫВОД
+
+PRINT A          Вывести текущее значение регистра A.
+PRINT HELLO      Вывести текст HELLO.
+PRINT "A"        Вывести именно букву A, а не значение регистра A.
+PRINT "HELLO!"   Вывести текст без внешних кавычек.
+CLS              Очистить область вывода на экране.
+
+Если после PRINT записано только имя регистра A–Z, печатается его
+значение. Чтобы вывести саму букву, заключите её в двойные кавычки.
+
+ПЕРЕХОДЫ И УСЛОВИЯ
+
+GOTO 4                  Безусловно перейти на строку 4.
+IF A > 5 GOTO 8         Если A больше 5, перейти на строку 8.
+IF A <= B GOTO 2        Если A меньше либо равно B, перейти на строку 2.
+
+Операторы сравнения для IF:
+==  равно                     !=  не равно
+>   больше                    <   меньше
+>=  больше или равно          <=  меньше или равно
+
+Общий вид: IF значение1 оператор значение2 GOTO номер_строки
+Вместо значения1, значения2 и номера строки допустим регистр.
+При ложном условии выполняется следующая по порядку строка.
+Номера строк начинаются с 1. Переход за пределы программы — ошибка.
+
+ЗАДЕРЖКА И ЗАВЕРШЕНИЕ
+
+WAIT 1000      Подождать 1000 мс (1 секунду) перед следующей командой.
+WAIT A         Подождать число миллисекунд, записанное в A.
+END            Завершить программу.
+STOP           То же, что END.
+
+WAIT принимает неотрицательное целое число; значения свыше
+60 000 мс ограничиваются 60 000 мс. Во время ожидания устройство
+продолжает опрашивать клавиатуру.
+
+КОММЕНТАРИИ В ПРОГРАММЕ
+
+REM мой комментарий      Строка-комментарий, не выполняется.
+// мой комментарий       Другой вариант строки-комментария.
+
+REM и // распознаются в начале строки как отдельные команды. Вставлять
+их в конец строки с другой командой как встроенный комментарий не надо.
+
+4. ПРИМЕР: ЦИКЛ ОТ 1 ДО 5
+-------------------------
+
+SET A 1
+PRINT A
+ADD A 1
+IF A <= 5 GOTO 2
+PRINT DONE
+END
+
+Вывод:
+1
+2
+3
+4
+5
+DONE
+END
+
+Построчно: сначала A=1; вывести A; увеличить A; если A<=5,
+вернуться на строку 2; иначе вывести DONE и завершить программу.
+
+5. УПРАВЛЕНИЕ ВО ВРЕМЯ ВЫПОЛНЕНИЯ
+--------------------------------
+A       Пауза / продолжить; после завершения — запустить снова.
+C       Очистить окно вывода.
+D или B Остановить программу и вернуться в меню PROGRAM.
+
+На экране видны состояние выполнения и номер строки.
+В окне вывода помещаются семь последних строк; длинные строки
+обрезаются до 25 символов.
+
 Интерфейс виртуальной среды
+<img width="651" height="483" alt="image" src="https://github.com/user-attachments/assets/fb934750-b51e-4ad2-be66-01d74956563f" />
+
 1. Редактор
+Как было описано выше - он для создания и редактирования программ. На изображении приведён программы, её запуск приведён в разделе Запустить.
+<img width="619" height="443" alt="image" src="https://github.com/user-attachments/assets/f0431075-231d-4520-bd07-9f4915d9333f" />
+
 2. Запустить
+Используется для запуска программ. 
+<img width="531" height="417" alt="image" src="https://github.com/user-attachments/assets/ec68b7f5-81b4-4c04-a137-d36585b50a4f" />
+
 3. Справка
+Здесь пример маленькой программы.
+<img width="489" height="353" alt="image" src="https://github.com/user-attachments/assets/da5a9d21-5047-4d3d-800b-d11b326b4238" />
+<img width="581" height="447" alt="image" src="https://github.com/user-attachments/assets/4491b458-e218-4322-b31a-4ee96ca05fa0" />
+
 
 ### Настройки
+В разделе настройки можно настроить систему, а также просмотреть программно-аппаратные данные оборудования
+<img width="519" height="407" alt="image" src="https://github.com/user-attachments/assets/b6f87fed-4325-45e4-aa54-746dbc8ffbdf" />
+
 1. Язык
+Здесь можно выбрать язык. На данный момент доступен русский и английский
+<img width="551" height="381" alt="image" src="https://github.com/user-attachments/assets/917a1930-ec47-4b0d-84d3-5c988d6affae" />
+<img width="555" height="389" alt="image" src="https://github.com/user-attachments/assets/6a56b0a1-acaa-4c2d-ae1e-7bf3932bfc54" />
+
 2. Тема
+Здесь можно поменять тему. На данный момент реализовано две цветовые палитры: янтарная и классическая(более контрастная).
+<img width="691" height="461" alt="image" src="https://github.com/user-attachments/assets/239f105f-e329-4003-bed2-72d1093fa7a8" />
+<img width="711" height="469" alt="image" src="https://github.com/user-attachments/assets/8f7c8787-e136-4539-9a21-b956707813b1" />
+<img width="761" height="505" alt="image" src="https://github.com/user-attachments/assets/927ea479-f5c0-4192-ae93-368b8007d2ca" />
+<img width="697" height="505" alt="image" src="https://github.com/user-attachments/assets/35bb565f-5869-40fb-8c8b-ca829c20b1e3" />
+<img width="695" height="473" alt="image" src="https://github.com/user-attachments/assets/9b37fdc7-df9e-4be2-a2d8-6a16daf44319" />
+<img width="751" height="519" alt="image" src="https://github.com/user-attachments/assets/2ed32785-91f1-4797-a49b-e69fb7cd70ed" />
+
+  
 3. Рабочий стол
+Здесь можно настроить отображение виджетов на рабочем столе и поменять обои.
+<img width="751" height="519" alt="image" src="https://github.com/user-attachments/assets/98b985f6-7337-493c-ba53-b1eb178b1b18" />
+
+
+   
 4. Блокировка
+Здесь можно настроить пинкод а также время до перехода в режим блокировки.
+<img width="617" height="401" alt="image" src="https://github.com/user-attachments/assets/a8a5b37f-0bbd-4af9-83a0-4ac09619d288" />
+
+   
 5. О системе
+Здесь можно посмотреть сведения о системе.
+<img width="721" height="465" alt="image" src="https://github.com/user-attachments/assets/07673b4f-8d7c-4405-aa27-7540d2c4a858" />
+<img width="656" height="408" alt="image" src="https://github.com/user-attachments/assets/d9faa5b3-9e98-4987-8000-2ce056deab2d" />
+
 
 # Из чего состоит
 Плата - ESP32 DevKit
 <img width="780" height="453" alt="image" src="https://github.com/user-attachments/assets/e120f515-dd5f-4192-b962-b5cfba131a2b" />
-
-Модули
 К ней подключены клавиатура, дисплей, и батарейный отсек для автономной работы.
 <img width="2097" height="2074" alt="image" src="https://github.com/user-attachments/assets/409f7605-be60-419a-b3ce-e10f84fef367" />
 
 Матричная клавиатура 4x4. Клавиатура типа "липучка", работает намного лучше чем кнопочные аналоги.
-Подключение
+# Какие провода куда подключать
 К коннектору HX 543 подключены провода мама-папа нумерация слева направо.
 1 -> D13
 2 -> D14
@@ -190,9 +372,6 @@ RESET -> D17
 CS -> D22
 <img width="2163" height="3375" alt="20260918_154742" src="https://github.com/user-attachments/assets/892550c0-eb17-4808-abf8-0764670e81d0" />
 <img width="2243" height="3265" alt="20260918_154826" src="https://github.com/user-attachments/assets/be752800-2bd2-44f9-abe8-b6c6161d592d" />
-
-
-
 
 Батарейный отсек.
 + -> VIN
