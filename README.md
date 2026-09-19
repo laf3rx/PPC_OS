@@ -119,7 +119,7 @@ cos 1 = 0.999848
 <img width="474" height="393" alt="image" src="https://github.com/user-attachments/assets/428abbcb-4855-40e4-99f6-bf8b747788f4" />
 
 
-### Файлы //отчёт в разработке
+### Файлы
 1. МЕНЕДЖЕР ФАЙЛОВ
 <img width="585" height="437" alt="image" src="https://github.com/user-attachments/assets/f9324546-6d7a-434a-8986-cd6daa320c28" />
 Позволяет проводить операции с файлами. Позволяет вывести информацию по файлу, переименовать, копировать, переместить, удалить, и сделать новую папку
